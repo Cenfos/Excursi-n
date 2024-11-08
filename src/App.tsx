@@ -3,7 +3,7 @@ import netlifyIdentity, { User } from 'netlify-identity-widget';
 import { ClienteForm } from './components/ClienteForm';
 import { ListaClientes } from './components/ListaClientes';
 import { Cake } from 'lucide-react';
-
+import './index.css';
 function App() {
   const [user, setUser] = useState<User | null>(null); 
 
@@ -28,7 +28,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col">
+    <div className="app-background min-h-screen flex flex-col">
       <header className="bg-white shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 flex justify-between items-center">
           <div className="flex items-center gap-2 sm:gap-3">
@@ -64,7 +64,7 @@ function App() {
             <ListaClientes />
           </div>
         ) : (
-          <p className="text-center text-gray-700 mt-8 sm:mt-16 text-lg sm:text-xl">
+          <p className="text-center text-white text-700 mt-8 sm:mt-16 text-lg sm:text-xl">
             Debes iniciar sesión para acceder al sistema de facturación.
           </p>
         )}

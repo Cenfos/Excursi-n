@@ -112,7 +112,7 @@ export function ClienteForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md">
+    <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md form-container">
       <h2 className="text-2xl font-bold mb-6 text-gray-800">Nuevo Cliente</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -123,7 +123,7 @@ export function ClienteForm() {
             required
             value={formData.nombre}
             onChange={(e) => setFormData({ ...formData, nombre: e.target.value })}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="input-field"
           />
         </div>
 
@@ -134,8 +134,7 @@ export function ClienteForm() {
             required
             value={formData.direccion}
             onChange={(e) => setFormData({ ...formData, direccion: e.target.value })}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-          />
+            className="input-field"          />
         </div>
 
         <div>
@@ -143,8 +142,8 @@ export function ClienteForm() {
           <select
             value={formData.frecuencia}
             onChange={(e) => setFormData({ ...formData, frecuencia: e.target.value })}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-          >
+            className="input-field"
+                      >
             <option value="semanal">Semanal</option>
             <option value="quincenal">Quincenal</option>
             <option value="mensual">Mensual</option>
@@ -157,8 +156,8 @@ export function ClienteForm() {
             <select
               value={formData.rosquillaTipo}
               onChange={(e) => setFormData({ ...formData, rosquillaTipo: e.target.value })}
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-            >
+              className="input-field"
+                          >
               <option value="blancas">Blancas</option>
               <option value="hojaldre">Hojaldre</option>
               <option value="trozos">Trozos</option>
@@ -168,8 +167,8 @@ export function ClienteForm() {
               min="0"
               value={formData.rosquillaCantidad}
               onChange={(e) => setFormData({ ...formData, rosquillaCantidad: parseInt(e.target.value) })}
-              className="mt-1 block w-24 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-            />
+              className="input-field"
+                          />
           </div>
         </div>
 
@@ -180,8 +179,8 @@ export function ClienteForm() {
             min="0"
             value={formData.bicaCantidad}
             onChange={(e) => setFormData({ ...formData, bicaCantidad: parseInt(e.target.value) })}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-          />
+            className="input-field"
+                      />
         </div>
 
         <div>
@@ -192,8 +191,8 @@ export function ClienteForm() {
             <select
               value={formData.magdalenaTipo}
               onChange={(e) => setFormData({ ...formData, magdalenaTipo: e.target.value })}
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-            >
+              className="input-field"
+                          >
               <option value="normales">Normales</option>
               <option value="chocolate">Chocolate</option>
             </select>
@@ -202,8 +201,8 @@ export function ClienteForm() {
               min="0"
               value={formData.magdalenaCantidad}
               onChange={(e) => setFormData({ ...formData, magdalenaCantidad: parseInt(e.target.value) })}
-              className="mt-1 block w-24 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-            />
+              className="input-field"
+                          />
           </div>
         </div>
 
@@ -214,8 +213,8 @@ export function ClienteForm() {
             min="0"
             value={formData.quesoCantidad}
             onChange={(e) => setFormData({ ...formData, quesoCantidad: parseInt(e.target.value) })}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-          />
+            className="input-field"
+                      />
         </div>
 
         <div>
@@ -225,8 +224,8 @@ export function ClienteForm() {
             min="0"
             value={formData.loteriaCantidad}
             onChange={(e) => setFormData({ ...formData, loteriaCantidad: parseInt(e.target.value) })}
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-          />
+            className="input-field"
+                      />
         </div>
       </div>
 
