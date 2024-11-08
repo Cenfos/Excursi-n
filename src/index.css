@@ -21,9 +21,10 @@ body {
   
   /* Contenedor principal */
   .container {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
+    grid-column: auto;
   }
   
   /* Cabecera */
@@ -50,7 +51,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    background-color: #4CAF50;
+    background-color: #69a06b;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -164,6 +165,11 @@ body {
     /* Ajustar el contenedor principal en pantallas pequeñas */
     .container {
       padding: 10px;
+      margin: 0 auto;
+      font-size: 14px;
+      grid-column: 1;
+
+      
     }
   
     header {

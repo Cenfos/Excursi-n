@@ -115,7 +115,7 @@ export function ClienteForm() {
     <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md form-container">
       <h2 className="text-2xl font-bold mb-6 text-gray-800">Nuevo Cliente</h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1  gap-6">
         <div>
           <label className="block text-sm font-medium text-gray-700">Nombre</label>
           <input
