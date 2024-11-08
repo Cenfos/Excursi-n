@@ -2,15 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Estilos personalizados */
-@layer utilities {
-    .sm-padding {
-      padding: 0.5rem;
-    }
-    .md-padding {
-      padding: 1rem;
-    }
-    .lg-padding {
-      padding: 1.5rem;
-    }
-  }
