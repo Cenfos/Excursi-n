@@ -62,7 +62,7 @@ export function ListaClientes() {
   );
 
   return (
-    <div className="mt-8" ref={targetRef}>
+    <div className="mt-8 max-w-screen-lg mx-auto px-4" ref={targetRef}>
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold text-gray-800">Lista de Clientes</h2>
         <button
@@ -96,10 +96,9 @@ export function ListaClientes() {
           bgColor="bg-purple-50"
         />
 
-        {/* Sección de resumen financiero total */}
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h3 className="text-xl font-bold text-gray-800 mb-4">Resumen Financiero Total</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg-white rounded-lg shadow-md p-6 space-y-4">
+          <h3 className="text-xl font-bold text-gray-800 text-center">Resumen Financiero Total</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
             <div className="p-4 rounded-lg bg-gray-50">
               <p className="text-lg font-bold">Ventas Totales</p>
               <p className="text-2xl">{totales.ventas.toFixed(2)}€</p>
@@ -115,10 +114,9 @@ export function ListaClientes() {
           </div>
         </div>
 
-        {/* Sección de resumen específico para "quesos" */}
-        <div className="bg-white rounded-lg shadow-md p-6 mt-6">
-          <h3 className="text-xl font-bold text-gray-800 mb-4">Resumen Específico de Quesos</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg-white rounded-lg shadow-md p-6 mt-6 space-y-4">
+          <h3 className="text-xl font-bold text-gray-800 text-center">Resumen Específico de Quesos</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
             <div className="p-4 rounded-lg bg-gray-50">
               <p className="text-lg font-bold">Ventas de Quesos</p>
               <p className="text-2xl">{totalesQuesos.ventas.toFixed(2)}€</p>

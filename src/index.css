@@ -8,40 +8,72 @@
     background-position: center;
     background-repeat: no-repeat;
   }
-/* Estilos generales */
+/* Estilos generales del formulario */
 .form-container {
-    max-width: 800px;
-    margin: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  .input-field {
+  .form-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333333;
+  }
+  
+  .form-label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: #555555;
+    display: block;
+  }
+  
+  .input-field, .input-select, .input-number {
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
     border-radius: 4px;
-    border: 1px solid #ccc;
+    font-size: 1rem;
   }
   
-  /* Ajuste para dispositivos móviles */
-  @media (max-width: 768px) {
+  .input-group {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .input-select, .input-number {
+    flex: 1;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilos de impresión */
+  @media print {
     .form-container {
+      max-width: 100%;
       padding: 1rem;
     }
   }
   
-  /* Estilos de impresión para DIN A4 */
-  @media print {
-    .form-container {
-      page-break-before: always;
-      width: 21cm;
-      height: 29.7cm;
-      margin: 0;
-      padding: 1.5cm;
-      font-size: 12pt;
-      print-color-adjust: exact;
-    }  
-    .input-field {
-      font-size: 10pt;
-      border: none;
-    }
-  }
-    
