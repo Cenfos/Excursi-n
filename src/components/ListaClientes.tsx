@@ -64,7 +64,7 @@ export function ListaClientes() {
   return (
     <div className="mt-8 max-w-screen-lg mx-auto px-4" ref={targetRef}>
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold text-gray-800">Lista de Clientes</h2>
+        <h2 className="text-2xl font-bold text-white-800">Lista de Clientes</h2>
         <button
           onClick={() => toPDF()}
           className="flex items-center gap-2 bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors"

@@ -187,4 +187,130 @@ body {
       grid-template-columns: 1fr;
     }
   }
+/* Estilo para la impresión */
+@media print {
+    /* Márgenes generales para la página */
+    @page {
+      margin: 20mm; /* Margen de 20mm en todos los lados */
+    }
+  
+    /* Configuración de márgenes para el contenido */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+  
+    .factura {
+      padding: 10mm;
+      box-sizing: border-box;
+      page-break-before: always; /* Asegura que cada factura empiece en una nueva página */
+    }
+  
+    .factura:last-child {
+      page-break-after: avoid; /* Evita el salto de página después de la última factura */
+    }
+  
+    /* Agregar un salto de página automático en ciertas secciones, como entre productos o secciones importantes */
+    .seccion-factura {
+      page-break-before: always; /* Forzar salto de página antes de una nueva sección */
+    }
+  
+    /* Ajustar el contenido para evitar el corte entre páginas */
+    .contenido {
+      page-break-inside: avoid; /* Evita cortes dentro de un bloque de contenido */
+    }
+  
+    /* Ajustes a los márgenes de los encabezados o pie de página */
+    header, footer {
+      page-break-before: always;
+    }
+  }
+/* Formulario de Agregar Cliente */
+form {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+.form-container {
+    background-color: #f4f4f4; 
+  padding: 20px; 
+  border-radius: 8px; 
+  border-bottom: 2px solid #ac7b21; 
+  height: auto;
+  }
+  
+  /* Estilos para los campos de entrada */
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-color: #ac7b21; /* Cambio de color al foco */
+    background-color: #fff;
+  }
+  
+  /* Estilos para las etiquetas */
+  label {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+  }
+  
+  /* Estilo para los select dentro del formulario */
+  select.input-field {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #f9f9f9;
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    padding-right: 30px;
+  }
+  
+  /* Espaciado entre los campos */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  /* Estilo de botones */
+  button {
+    padding: 12px 20px;
+    background-color: #ac7b21;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #d9ac59; /* Cambio de color al pasar el ratón */
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Estilo de la cabecera */
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+  }
   
