@@ -17,6 +17,7 @@ export function ListaClientes() {
     };
   }, [clientes]);
 
+  // Calcular totales generales
   const totales = clientes.reduce(
     (acc, cliente) => {
       const pedido = cliente.pedido;
@@ -42,6 +43,19 @@ export function ListaClientes() {
           pedido.magdalenas.ganancia +
           pedido.queso.ganancia +
           pedido.loteria.ganancia,
+      };
+    },
+    { ventas: 0, costos: 0, ganancias: 0 }
+  );
+
+  // Calcular totales específicos para "quesos"
+  const totalesQuesos = clientes.reduce(
+    (acc, cliente) => {
+      const pedido = cliente.pedido;
+      return {
+        ventas: acc.ventas + pedido.queso.precio,
+        costos: acc.costos + pedido.queso.costo,
+        ganancias: acc.ganancias + pedido.queso.ganancia,
       };
     },
     { ventas: 0, costos: 0, ganancias: 0 }
@@ -82,6 +96,7 @@ export function ListaClientes() {
           bgColor="bg-purple-50"
         />
 
+        {/* Sección de resumen financiero total */}
         <div className="bg-white rounded-lg shadow-md p-6">
           <h3 className="text-xl font-bold text-gray-800 mb-4">Resumen Financiero Total</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -96,6 +111,25 @@ export function ListaClientes() {
             <div className="p-4 rounded-lg bg-green-50">
               <p className="text-lg font-bold text-green-700">Ganancias Totales</p>
               <p className="text-2xl text-green-700">{totales.ganancias.toFixed(2)}€</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Sección de resumen específico para "quesos" */}
+        <div className="bg-white rounded-lg shadow-md p-6 mt-6">
+          <h3 className="text-xl font-bold text-gray-800 mb-4">Resumen Específico de Quesos</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="p-4 rounded-lg bg-gray-50">
+              <p className="text-lg font-bold">Ventas de Quesos</p>
+              <p className="text-2xl">{totalesQuesos.ventas.toFixed(2)}€</p>
+            </div>
+            <div className="p-4 rounded-lg bg-red-50">
+              <p className="text-lg font-bold text-red-700">Costos de Quesos</p>
+              <p className="text-2xl text-red-700">{totalesQuesos.costos.toFixed(2)}€</p>
+            </div>
+            <div className="p-4 rounded-lg bg-green-50">
+              <p className="text-lg font-bold text-green-700">Ganancias de Quesos</p>
+              <p className="text-2xl text-green-700">{totalesQuesos.ganancias.toFixed(2)}€</p>
             </div>
           </div>
         </div>
